@@ -1,26 +1,25 @@
 <?php
-    
 	class Connection
 	{
 		private $host; //server address
-	    private $dbname; //db name
-	    private $username;	//user name 
-	    private $password;	//password
+	    	private $dbname; //db name
+	    	private $username;	//user name 
+	    	private $password;	//password
 		public $con;
 		
 		public function __construct($host,$dbname,$username,$password)
 		{	
-	        try
-        	{
+	        	try
+        		{
 				$this->host=$host;
-	            $this->dbname=$dbname;
-	            $this->username=$username;	
-	            $this->password	=$password;
+	            		$this->dbname=$dbname;
+	            		$this->username=$username;	
+			        $this->password	=$password;
 				$this->con=new PDO("mysql:host=$this->host;	dbname=$this->dbname",$this->username,$this->password);
 			}	
-            catch(PDOException	$pe)	
-	        {
-				echo "connexion	a	la	base	a	echouee";
+            		catch(PDOException	$pe)	
+	        	{
+				echo "connexion	a la base a echouee";
 			}
 		}
 		
@@ -66,4 +65,3 @@
 	}
 	$connection=new Connection('localhost','entretient','root','');
 ?>
-
