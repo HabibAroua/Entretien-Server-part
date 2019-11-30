@@ -45,8 +45,7 @@
               	$T[$i]=$carrefour = array('nom'=>$tab[0],);
               	$i++;
             }
-			return $T;
+	    return $T;
         }
     }
-    
 ?>
